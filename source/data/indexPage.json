@@ -8,7 +8,7 @@
 				"subtitle":"с фуа-гра",
 				"text":"10 порций <br> мышь в подарок",
 				"image":{
-					"src": "source/static/assets/images/cat.png",
+					"src": "./assets/images/cat.png",
 					"alt": "cat"
 				},
 				"volume":"0,5 <span>кг</span>",
@@ -22,7 +22,7 @@
 				"subtitle":"с рыбой",
 				"text":"40 порций <br> 2 мыши в подарок",
 				"image":{
-					"src": "source/static/assets/images/cat.png",
+					"src": "./assets/images/cat.png",
 					"alt": "cat"
 				},
 				"volume":"2 <span>кг</span>",
@@ -36,7 +36,7 @@
 				"subtitle":"с курой",
 				"text":"100 порций <br> 5 мышей в подарок <br> заказчик доволен",
 				"image":{
-					"src": "source/static/assets/images/cat.png",
+					"src": "./assets/images/cat.png",
 					"alt": "cat"
 				},
 				"volume":"5 <span>кг</span>",
