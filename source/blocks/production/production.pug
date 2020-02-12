@@ -1,0 +1,19 @@
+include ../core/image/image.pug
+
+mixin production(data, className)
+	.production(class=className)
+		.production__title!= data.title
+		.production__container
+			each item in data.item
+				.production__item(class=(item.disabled ? 'production__item--disabled' : ''))
+					.production__card(class=(item.disabled ? 'production__card--disabled' : ''))
+						.production__card-info
+							.production__card-caption!= item.caption
+							.production__card-title!= item.title
+							.production__card-subtitle!= item.subtitle
+							.production__card-text!= item.text
+						+image(item.image, 'production__card-image')
+						.production__card-volume!= item.volume
+					p.production__subtext!= item.subtext
+					p.production__subtext.production__subtext--selected!= item.selected
+					p.production__subtext.production__subtext--disabled!= item.disabled

@@ -1,0 +1,220 @@
+$parent: production;
+
+@include block($parent) {
+    background: $b url(static/assets/images/background.png);
+    z-index: 0;
+    position: relative;
+    padding: rem(40) 0;
+    height: auto;
+
+	@include element($parent, 'container') {
+        margin: 0 auto;
+
+        @media (min-width: $tMin) {
+            max-width: rem(768);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        @media (min-width: $d1280) {
+            max-width: rem(1280);
+        }
+    }
+
+    @include element($parent, 'title') {
+        width: 100%;
+        font-size: rem(36);
+        color:#fff;
+        text-align: center;
+    }
+
+    @include element($parent, 'item') {
+        width: 100%;
+        max-width: rem(320);
+        margin: 36px auto 0;
+
+        @include modifier($parent, 'selected') {   
+            @include element($parent, 'card') {
+                @include element($parent, 'card-volume') {
+                    background: #D91667;
+                }
+                &::before{
+                    background-color:#D91667;
+                    background: linear-gradient(135deg, transparent 31px, #D91667 0);
+                }
+            }
+
+                @include element($parent, 'subtext') {
+                    display: none;
+                }
+
+                @include element($parent, 'subtext--selected') {
+                    display: block;
+                }
+        }
+
+        @include modifier($parent, 'disabled') {
+            @include element($parent, 'card') {
+                @include element($parent, 'card-volume') {
+                    background: #B3B3B3;
+                }
+            &::before{
+                background-color: #B3B3B3;
+                background: linear-gradient(135deg, transparent 31px, #B3B3B3 0);
+            }
+        }
+
+            @include element($parent, 'subtext') {
+                display: none;
+            }
+
+            @include element($parent, 'subtext--disabled') {
+                display: block;
+                color: #FFFF66;
+            }
+        }
+    }
+
+    @include element($parent, 'card') {
+        width: 320px;
+        min-height: 480px;
+        border-radius: 10px;
+        padding-left: 45px;
+        padding-right: 45px;
+        padding-top: 20px;
+        color: #666666;
+        background-color: #f2f2f2;
+        background: linear-gradient(135deg, transparent 30px, #f2f2f2 0);
+        margin-bottom: 19px;
+        display: block;
+        cursor: pointer;
+        position: relative;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+
+
+        &::before {
+            content: '';
+            width: 328px;
+            min-height: 489px;
+            height: calc(100% + 6px);
+            z-index: -1;
+            border-radius: 10px;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            box-sizing: inherit;
+            background-color: #1698D9;
+            background: linear-gradient(135deg, transparent 31px, #1698d9 0);
+        }
+
+        &:hover {
+            @include element($parent, 'card-volume') {
+                background: #2EA8E6;
+            }
+            &::before {
+                background: #2EA8E6;
+                background: linear-gradient(135deg, transparent 31px, #2EA8E6 0);
+            }
+        }
+
+        @include modifier($parent, 'disabled') {
+
+            @include element($parent, 'card-volume') {
+                background:#B3B3B3;
+            }
+            &::before{
+                background-color: #B3B3B3;
+                background: linear-gradient(135deg, transparent 31px, #B3B3B3 0);
+            }
+        }
+    }
+
+    @include element($parent, 'card-info') {
+        flex-grow: 1;
+    }
+
+    @include element($parent, 'card-caption') {
+        font-size: rem(16);
+        line-height: rem(19);
+        color: #666666;
+    }
+
+    @include element($parent, 'card-title') {
+        font-size: rem(48);
+        line-height: rem(56);
+        color: $b;
+        font-weight: bold;
+    }
+
+    @include element($parent, 'card-subtitle') {
+        font-size: rem(24);
+        line-height: rem(28);
+        color: $b;
+        font-weight: bold;
+    }
+
+    @include element($parent, 'card-text') {
+        font-size: rem(14);
+        line-height: rem(16);
+        color: #666666;
+        margin-top: rem(15);
+    }
+
+    @include element($parent, 'card-image') {
+        margin-left: -45px;
+
+        img{
+            border-bottom-left-radius: 10px;
+        }
+    }
+
+    @include element($parent, 'card-volume') {
+        width: 80px;
+        height: 80px;
+        color: white;
+        border-radius: 100%;
+        position: absolute;
+        text-align: center;
+        padding-top: rem(6);
+        font-size: rem(42);
+        bottom: rem(12);
+        right: rem(12);
+        background: #1698D9;
+
+        span {
+            font-size: rem(21);
+            line-height: rem(21);
+            display: block;
+        }
+
+        &:hover{
+            background: #2EA8E6;
+        }
+    }
+
+    @include element($parent, 'subtext') {
+        font-size: 13px;
+        color: white;
+        text-align: center;
+        width: 100%;
+
+        @include modifier($parent, 'selected') {  
+            display: none; 
+        }
+
+        @include modifier($parent, 'disabled') {
+            display: block;
+            
+            @include element($parent, 'subtext') {
+                display: none;
+            }
+        }
+        a {
+            color: #2EA8E6;
+            border-bottom: 1px dashed #2EA8E6;
+        }
+    }
+}

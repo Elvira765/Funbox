@@ -1,0 +1,50 @@
+{
+	"production":{ 
+		"title":"Ты сегодня покормил кота?",
+		"item": [
+			{
+				"caption":"Сказочное заморское явство",
+				"title":"Нямушка",
+				"subtitle":"с фуа-гра",
+				"text":"10 порций <br> мышь в подарок",
+				"image":{
+					"src": "source/static/assets/images/cat.png",
+					"alt": "cat"
+				},
+				"volume":"0,5 <span>кг</span>",
+				"subtext": "Чего сидишь? Порадуй котэ, <a href'#'>купи</a>",
+				"selected":"Печень утки разварная с артишоками",
+				"status": "default"
+			},
+			{
+				"caption":"Сказочное заморское явство",
+				"title":"Нямушка",
+				"subtitle":"с рыбой",
+				"text":"40 порций <br> 2 мыши в подарок",
+				"image":{
+					"src": "source/static/assets/images/cat.png",
+					"alt": "cat"
+				},
+				"volume":"2 <span>кг</span>",
+				"subtext":"Чего сидишь? Порадуй котэ, <a href'#'>купи</a>",
+				"selected":"Головы щучьи с чесноком да свежайшая семгушка",
+				"status": "selected"
+			},
+			{
+				"caption":"Сказочное заморское явство",
+				"title":"Нямушка",
+				"subtitle":"с курой",
+				"text":"100 порций <br> 5 мышей в подарок <br> заказчик доволен",
+				"image":{
+					"src": "source/static/assets/images/cat.png",
+					"alt": "cat"
+				},
+				"volume":"5 <span>кг</span>",
+				"subtext":"Чего сидишь? Порадуй котэ, <a href'#'>купи</a>",
+				"selected":"Филе из цыплят с трюфелями в бульоне",
+				"status": "disabled",
+				"disabled":"Печалька, с фуа-гра закончилась"
+			}
+		]	
+	}
+}

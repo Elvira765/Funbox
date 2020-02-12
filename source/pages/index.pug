@@ -1,0 +1,9 @@
+extends ../layouts/main.pug
+
+include ../blocks/production/production.pug
+
+block vars
+	- homepage = true;
+	- pageInfo = require('../data/indexPage.json');
+block content
+	+production(pageInfo.production)
