@@ -44,7 +44,7 @@
     "postcss": "^7.0.14",
     "postcss-loader": "^3.0.0",
     "promise-polyfill": "^8.1.0",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.0.3",
     "stylelint": "^10.1.0",
